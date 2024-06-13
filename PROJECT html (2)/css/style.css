@@ -1,0 +1,448 @@
+/*
+<!--
+TASK : TO CREATE A VEHICLE ECOMMERCE WEBSITE
+-->
+*/
+ 
+ /* following style will be applied to every element */
+ *, *::before, *::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; 
+ }
+
+ /* nav bar styling */
+header img{
+    height:100px;
+    width: 190px;
+    margin-left: 40px;
+    margin-right: 200px;
+}
+header input[type=text]{
+    background-color: white;
+    background-image: url("../images/LOGO/searchicon.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 4px 20px;
+    margin-right: 50px;
+    margin-left: 30px;
+    border: 1.9px solid aqua;
+    padding-left: 0px;
+    border-radius: 5px;
+    width: 220px;
+}
+
+ /* body styling */
+body{
+    background-image: url("../images/LOGO/V.jpg");
+   background-size:1350px 1005px ;
+    position: relative;
+    min-height: 100%;
+    font-family: sans-serif;
+    background-color:mediumturquoise;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+/* header styling */
+header{
+    background-color:white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 grey;
+    
+}
+header * {
+    display: inline-block;
+}
+header li {
+    padding:40px 20px;
+    
+     
+}
+header li:hover{
+    background-color:aqua;
+}
+header li a {
+    color: black;
+    text-decoration: none;
+}
+
+/* main body properties */
+.pagewrap{
+    display: flex;
+
+    /*vertically stack children*/
+    flex-direction: column;
+
+    /* expand to take full height of page */
+    /* min-height overrides both height & max-height */
+    min-height: 100vh; 
+
+  } 
+   main{
+    flex-grow: 1;
+    margin-bottom: 20px; /* main content sepaarion from footer*/
+  }
+
+/* footer styling */
+footer {
+      
+        right: 0;
+        bottom:0;
+        left:0;
+        margin-top:auto;  /* footer position*/
+       height: 210px;
+        background-color: white;
+        box-shadow: 0 0 25px 0 black;
+}
+footer img{
+    height: 190px;
+    width: 1fr;
+    margin-left: 40px;
+}
+/* footer copyright styling */
+.copyright{
+    text-align: center;
+    color: dimgray;
+}
+.container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+/* footer customer care styling*/
+.customer_care{
+    padding-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    color: darkslategrey;
+}
+.customer_care h3{
+    color: navy;
+    border:1px solid #CCC;
+    padding:10px;
+}
+/* footer social media styling */
+.social_media{
+    
+    margin-left: 10px;
+    text-align: center;
+    color: darkslategrey;
+}
+.social_media h3{
+    color: navy;
+    border:1px solid #CCC;
+    padding:10px;
+}
+.social_media a img {
+    width: 40px;
+    height: 40px;
+}
+/* footer subcribe styling */
+.subcribe{
+    padding-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    color:darkslategrey;
+}
+.subcribe h3{
+    color: navy;
+    border:1px solid #CCC;
+    padding:10px;
+}
+
+/* forms styling */
+.forms{
+    border-radius: 5px;
+    background-color:white;
+    display:block;
+    float:none;
+    padding:40px;
+    box-shadow:0 0 20px 0;
+  margin: 10px ;
+  }
+  .forms input{
+    border-radius: 5px;
+  }
+
+  /*homepage car card styling  */
+  .car{
+      margin-top:20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      background-color:rgba(211, 211, 211, 0.699);
+      display: grid;
+      grid-template-columns:1fr 1fr 1fr ;
+         /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        padding: 5px;
+        color:black;
+        
+    }
+  .car:hover{
+      /* On mouse-over, add a deeper shadow */
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+     background-color: rgba(255, 255, 255, 0.911); 
+  }
+.car-model{
+    text-align: center;
+    padding: 90px 10px;
+}
+/* .car-model:hover{
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 10px;
+} */
+.car-image img{
+    width :358px;
+    border-radius: 10px;
+   box-shadow: 0 4px 8px 0 lightgray;
+   transition: 0.3s;
+}
+.car-image img:hover{
+    box-shadow: 0 8px 16px dimgray;
+}
+.car-description{
+    display: grid;
+    grid-template-rows: 25px 100px 25px;
+}
+.car-description button{
+   background-color:rgba(247, 21, 96, 0.897);
+   border-radius: 10px;
+}   
+.car-description button a{
+    text-decoration: none;
+    color:white;
+}
+/* .car-description:hover {
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 5px;
+} */
+/* shop car card styling */
+.car-card{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 0.5fr ;
+    margin-top:20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      background-color:rgba(255, 255, 255, 0.685);
+      
+         /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+}
+.car-card:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.car-gallery img{
+    width: 250px;
+
+}
+.car-gallery{
+    margin: 20px;
+}
+.car-info{
+    padding : 30px;
+    text-align: justify;
+}
+.car-info p{
+    padding: 5px;
+}
+.car-info h3{
+    color:chocolate;
+}
+.car-closing button{
+    display: grid;
+    background-color:rgba(247, 21, 96, 0.897);
+   border-radius: 0px;
+   width: 150px;
+   padding: 10px;
+   border-radius: 5px;
+   text-decoration: none;
+    color:white;
+}
+.car-closing p{
+    background-color: rgba(57, 235, 34, 0.897);
+    color:white;
+    padding: 5px 10px;
+    border-radius: 5px ;
+}
+.car-closing{
+    padding: 30px;
+}
+
+/* about page styling*/
+.about{
+margin-top:40px;
+margin-left: 5px;
+margin-right: 5px;
+background-color:rgba(255, 255, 255, 0.603);
+display:block;
+   /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  text-align: justify;
+  padding: 20px;
+}
+.about:hover{
+    background-color: rgb(255, 255, 255); 
+}
+.about h1,h3{
+    color:chocolate;
+    text-align: center;
+}
+.paragraphs{
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.home-image img{
+   padding-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    width: 98.5%;
+    height:550px ;
+}
+.heading{
+    margin-top:40px;
+margin-left: 5px;
+margin-right: 5px;
+background-color:bisque;
+display:block;
+   /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  text-align: center;
+ 
+  padding: 20px;
+}
+.heading h2{
+    text-align: center;
+  color:chartreuse;
+   
+}
+.heading h1 {
+    text-align: center;
+  color:black ;
+ 
+}
+.heading h3 {
+    text-align: center;
+    font-family: Comic Sans MS ;
+  color:blueviolet;
+}
+
+/* contact us styling */
+.contact{
+     margin-top:20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color:rgba(255, 255, 255, 0.61);
+
+   /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  text-align: justify;
+  padding: 20px;
+    display :grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.details{
+    display: table-column;
+    grid-template-rows: 10px 10px 10px 10px;
+   
+}
+.details h2{
+    text-align: center;
+    color: chocolate;
+}
+.details h3{
+    text-align: center;
+    color: black;
+    line-height: 100px;
+
+}
+.details p{
+    text-align: center;
+    color: black;
+    line-height: 20px;
+
+}
+/* contact us page form styling */
+.forms input[type = text]{
+   width: 100%;
+   padding:12px 20px;
+   margin: 8px 0;
+   box-sizing: border-box;
+  border:none;
+  border-bottom: 2px solid aqua;
+  transition: 00.3s;
+}
+   /* On mouse-over, reduce transparency*/
+ .forms:hover{
+  
+  background-color:rgba(255, 255, 255, 0.952);
+} 
+
+.forms{
+    background-color: rgba(255, 255, 255, 0.274);
+}
+.forms input[type=Password]{
+   width: 100%;
+   padding:12px 20px;
+   margin: 8px 0;
+   box-sizing: border-box;
+  border:none;
+  border-bottom: 2px solid aqua;
+  transition: 00.3s;
+}
+.forms input[type=password]:focus{
+    background-color: aqua;
+    outline: none;
+}
+
+.forms input[type=text]:focus{
+    background-color: aqua;
+    outline: none;
+}
+.forms button{
+    padding: 5px 20px;
+    background-color:fuchsia;
+    border-radius: 5px;
+  
+}
+
+/* log in page form styling */
+.log-in-form{
+    margin-top: 40px;
+text-align:center;
+background-color:rgba(255, 255, 255, 0.651);
+}
+.active{
+    background-color:darkgray;
+  }
+/* contact us page textarea styling */
+textarea {
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid aqua;
+}
+textarea:focus{
+    background-color: aqua;
+    outline: none;
+}
